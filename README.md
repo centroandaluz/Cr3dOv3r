@@ -1,79 +1,60 @@
 # Cr3dOv3r [![Python 3.5](https://img.shields.io/badge/Python-3.5-yellow.svg)](http://www.python.org/download/) [![Python 2.7](https://img.shields.io/badge/Python-2.7-yellow.svg)](http://www.python.org/download/) ![Build Status](https://img.shields.io/badge/Version-0.4.4-red.svg)
 
-**Your best friend in credential reuse attacks.**
+**Tu mejor amigo en ataques de reutilización de credenciales.**
 
-You give Cr3dOv3r an email then it does two simple useful jobs with it:
-- Search for public leaks for the email and returns the result with the most useful details about the leak (Using haveibeenpwned API) and tries to get the plain text passwords from leaks it find (Using [@GhostProjectME](https://twitter.com/GhostProjectME)).
-- Now you give it a password or a leaked password then it tries this credentials against some well-known websites (ex: Facebook, Twitter, Google...), tells if the login successful and if there's captcha some where blocking our way!
+Le das un correo electrónico a Cr3dOv3r y luego realiza dos tareas simples y útiles:
+- Busca filtraciones públicas para el correo electrónico y devuelve el resultado con los detalles más útiles sobre la filtración (Usando API haveibeenpwned) e intenta obtener las contraseñas de texto sin formato de las filtraciones que encuentra (Usando [@GhostProjectME] (https: // twitter. com / GhostProjectME)).
+- Ahora le das una contraseña o una contraseña filtrada, entonces prueba estas credenciales contra algunos sitios web conocidos (por ejemplo: Facebook, Twitter, Google ...), te dice si el inicio de sesión fue exitoso y si hay captcha que bloqueó nuestro camino.
 
-### Some of the scenarios Cr3dOv3r can be used in it
-- Check if the targeted email is in any leaks and then use the leaked password to check it against the websites.
-- Check if the target credentials you found is reused on other websites/services.
-- Checking if the old password you got from the target/leaks is still used in any website.
+### Algunos de los escenarios en los que se puede usar Cr3dOv3r
+- Verificar si el correo electrónico objetivo tiene alguna fuga y luego use la contraseña filtrada para verificarlo en los sitios web.
+- Comprobar si las credenciales que posee se reutilizan en otros sitios web / servicios.
+- Comprobar si la contraseña anterior que obtuvo del objetivo todavía se utiliza en cualquier sitio web.
 
 # Screenshots
 ![screenshot](https://github.com/D4Vinci/Cr3dOv3r/blob/master/Data/Email1.png)
 ![screenshot](https://github.com/D4Vinci/Cr3dOv3r/blob/master/Data/Email2.png)
 ![screenshot](https://github.com/D4Vinci/Cr3dOv3r/blob/master/Data/Email3.png)
 
-# Usage
+# Uso
 ```
-usage: Cr3d0v3r.py [-h] [-p] [-np] [-q] email
+uso: Cr3d0v3r.py [-h] [-p] [-np] [-q] correo_electrónico
 
-positional arguments:
-  email       Email/username to check
+argumentos posicionales:
+  correo_electrónico - Correo electrónico / nombre de usuario para verificar
 
-optional arguments:
-  -h, --help  show this help message and exit
-  -p          Don't check for leaks or plain text passwords.
-  -np         Don't check for plain text passwords.
-  -q          Quiet mode (no banner).
+argumentos opcionales:
+  -h, - ayuda a mostrar este mensaje de ayuda y salir
+  -p No compruebe fugas o contraseñas de texto sin formato.
+  -np No compruebe las contraseñas de texto sin formato.
+  -q Modo silencioso (sin banner).
 
 ```
 
-## Installing and requirements
-### To make the tool work at its best you must have :
-- Python 3.x or 2.x (preferred 3).
-- Linux or Windows system.
-- Worked on some machines with MacOS and python3.
-- The requirements mentioned in the next few lines.
+## Instalación y requisitos
+### Para que la herramienta funcione de la mejor manera, debe tener:
+- Python 3.xo 2.x (preferido 3).
+- Sistema Linux o Windows.
 
-### Installing
-**+For windows : (After downloading ZIP and upzip it)**
+### Instalación
+**+ Para Windows: (después de descargar el ZIP y descomprimirlo)**
 ```
 cd Cr3dOv3r-master
 python -m pip install -r win_requirements.txt
 python Cr3d0v3r.py -h
 ```
-**+For Linux :**
+**+ Para Linux:**
 ```
 git clone https://github.com/D4Vinci/Cr3dOv3r.git
 cd Cr3dOv3r
-python3 -m pip install -r requirements.txt
+python3 -m pip install -r require.txt
 python3 Cr3d0v3r.py -h
 ```
 
-**+For docker :**
-```bash
-git clone https://github.com/D4Vinci/Cr3dOv3r.git
-docker build -t cr3dov3r Cr3dOv3r/
-docker run -it cr3dov3r "test@example.com"
-```
+**Si desea agregar un sitio web a la herramienta, siga las instrucciones en [wiki] (https://github.com/D4Vinci/Cr3dOv3r/wiki)**
 
+## Contacto
+- [Twitter] (https://twitter.com/D4Vinci1)
 
-**If you want to add a website to the tool, follow the instructions in the [wiki](https://github.com/D4Vinci/Cr3dOv3r/wiki)**
-
-## Contact
-- [Twitter](https://twitter.com/D4Vinci1)
-
-## Donation
-If this tool has been useful for you, feel free to thank me by buying me a coffee :)
-
-[![Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://buymeacoffee.com/d4vinci)
-
-## Disclaimer
-Cr3dOv3r is created to show how could credential reuse attacks get dangerous and it's not responsible for misuse or illegal purposes. Use it only for Pen-test or educational purpose !!!
-
-Copying a code from this tool or using it in another tool is accepted as you mention where you get it from :smile:
-
-> Pull requests are always welcomed :D
+## Descargo de responsabilidad
+Cr3dOv3r se creó para mostrar cómo los ataques de reutilización de credenciales pueden volverse peligrosos y no es responsable del mal uso o de propósitos ilegales. ¡Úselo solo para Pen-test o para fines educativos!
